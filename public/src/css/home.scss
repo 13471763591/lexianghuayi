@@ -1,0 +1,124 @@
+@function vw($px) {
+    @return ($px/750)*100vw;
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+html,
+body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100px;
+}
+
+img {
+    display: block;
+}
+
+@media screen and (max-width:320px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:321px) and (max-width:375px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width:376px) and (max-width:1080px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.search {
+    width: 100%;
+    height: vw(51);
+    padding: 10px 0;
+    background: #ff464e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .options {
+        float: left;
+        margin-right: vw(15);
+
+        img {
+            width: vw(48);
+            height: vw(48);
+        }
+    }
+
+    input {
+        width: vw(590);
+        height: vw(60);
+        background: #fff;
+        border: none;
+        border-radius: 20px;
+    }
+
+    .more {
+        float: right;
+        margin-left: vw(15);
+
+        img {
+            width: vw(48);
+            height: vw(48);
+        }
+    }
+
+
+}
+
+// 底部
+.footer {
+    width: 100%;
+    height: 7%;
+    background: rgb(223, 197, 222);
+    position: fixed;
+    bottom: 0;
+
+    ul {
+        width: 100%;
+        height: vw(50);
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            width: 25%;
+            height: vw(50);
+            float: left;
+            // display: flex;
+            flex-direction: column;
+            text-align: center;
+            
+
+            img {
+                width: vw(48);
+                height: vw(48);
+                margin: 0 auto;
+            }
+
+            p {
+                color: #929292;
+                font-size: vw(16);
+
+            }
+
+        }
+    }
+}
